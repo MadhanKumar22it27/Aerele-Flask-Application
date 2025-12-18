@@ -164,6 +164,7 @@ Detailed conflict explanation in UI
 
 Migration to PostgreSQL or MySQL
 
+```
 Output Screenshots:
 
 <img width="1917" height="970" alt="image" src="https://github.com/user-attachments/assets/336fe15a-d2a7-4e4b-9925-06dcbd34e94a" />
