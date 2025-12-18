@@ -96,10 +96,6 @@ Event-Scheduling-System/
 ├── .gitignore
 └── README.md
 
-yaml
-Copy code
-
----
 
 ## ⚙️ How to Run the Project
 
