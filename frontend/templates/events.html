@@ -9,8 +9,18 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-dark" style="background-color:#4f46e5;">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="/">Event Scheduler</a>
+  <div class="container d-flex align-items-center">
+
+    <!-- Back button (left) -->
+    <a href="/" class="btn btn-outline-light btn-sm">
+      ← Back
+    </a>
+
+    <!-- Title (center) -->
+    <span class="navbar-brand mx-auto fw-bold">
+      Event Scheduler
+    </span>
+
   </div>
 </nav>
 
@@ -74,11 +84,10 @@ function handleCreateEvent() {
     }
     return data;
   })
-  .then(() => {
-    msg.innerText = "✅ Event created successfully!";
+  .then(data => {
+    msg.innerText = `✅ Event created successfully! (Event ID: ${data.event_id})`;
     msg.style.color = "#16a34a";
 
-    // reset form
     title.value = "";
     start.value = "";
     end.value = "";

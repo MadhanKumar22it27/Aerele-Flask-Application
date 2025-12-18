@@ -9,8 +9,18 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-dark" style="background-color:#4f46e5;">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="/">Event Scheduler</a>
+  <div class="container d-flex align-items-center">
+
+    <!-- Back button (left) -->
+    <a href="/" class="btn btn-outline-light btn-sm">
+      ← Back
+    </a>
+
+    <!-- Title (center) -->
+    <span class="navbar-brand mx-auto fw-bold">
+      Event Scheduler
+    </span>
+
   </div>
 </nav>
 
@@ -76,9 +86,10 @@ function createResource() {
     }
     return data;
   })
-  .then(() => {
-    msg.innerText = "✅ Resource created successfully!";
+  .then(data => {
+    msg.innerText = `✅ Resource created successfully! (Resource ID: ${data.resource_id})`;
     msg.style.color = "#16a34a";
+
     document.getElementById("name").value = "";
   })
   .catch(err => {
@@ -87,7 +98,6 @@ function createResource() {
   });
 }
 </script>
-
 
 </body>
 </html>
