@@ -163,3 +163,17 @@ Calendar-based event visualization
 Detailed conflict explanation in UI
 
 Migration to PostgreSQL or MySQL
+
+Output Screenshots:
+
+<img width="1917" height="970" alt="image" src="https://github.com/user-attachments/assets/336fe15a-d2a7-4e4b-9925-06dcbd34e94a" />
+
+<img width="1915" height="976" alt="image" src="https://github.com/user-attachments/assets/4faa11b1-4f91-4238-b817-189b2ce0f671" />
+
+<img width="1919" height="966" alt="image" src="https://github.com/user-attachments/assets/98119084-2b6d-454f-b1a0-755db7e4924b" />
+
+<img width="1912" height="970" alt="image" src="https://github.com/user-attachments/assets/e2b2f1fc-70ac-416e-a406-c6e69dfa5e29" />
+
+<img width="1918" height="971" alt="image" src="https://github.com/user-attachments/assets/48ec5d3a-4382-4dd6-820a-f9b62f8eaaeb" />
+
+
