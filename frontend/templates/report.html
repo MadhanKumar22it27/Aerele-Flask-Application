@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resource Utilization</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body style="background-color:#f8fafc;">
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark" style="background-color:#4f46e5;">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">Event Scheduler</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+
+      <div class="card shadow-sm">
+        <div class="card-body">
+
+          <h4 class="text-center mb-4">Resource Utilization Report</h4>
+
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Start Date & Time</label>
+              <input id="start" type="datetime-local" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">End Date & Time</label>
+              <input id="end" type="datetime-local" class="form-control">
+            </div>
+          </div>
+
+          <button
+            class="btn w-100 text-white mb-4"
+            style="background-color:#4f46e5;"
+            onclick="getReport()">
+            Generate Report
+          </button>
+
+          <table class="table table-bordered table-hover bg-white">
+            <thead class="table-light">
+              <tr>
+                <th>Resource</th>
+                <th>Total Hours Utilized</th>
+              </tr>
+            </thead>
+            <tbody id="table"></tbody>
+          </table>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function getReport() {
+  fetch(`/reports/utilization?start=${start.value}&end=${end.value}`)
+    .then(r => r.json())
+    .then(data => {
+      table.innerHTML = "";
+      data.forEach(row => {
+        table.innerHTML += `
+          <tr>
+            <td>${row.resource}</td>
+            <td>${row.total_hours}</td>
+          </tr>
+        `;
+      });
+    });
+}
+</script>
+
+</body>
+</html>
